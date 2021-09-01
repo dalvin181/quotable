@@ -7,6 +7,24 @@ let quoteAuthor2 = document.getElementById("quoteAuthor2");
 let quoteBody3 = document.getElementById("quoteBody3");
 let quoteAuthor3 = document.getElementById("quoteAuthor3");
 
+// 
+
+let shortQuoteBody1 = document.getElementById("shortQuoteBody1");
+let shortQuoteAuthor1 = document.getElementById("shortQuoteAuthor1");
+
+let shortQuoteBody2 = document.getElementById("shortQuoteBody2");
+let shortQuoteAuthor2 = document.getElementById("shortQuoteAuthor2");
+
+let shortQuoteBody3 = document.getElementById("shortQuoteBody3");
+let shortQuoteAuthor3 = document.getElementById("shortQuoteAuthor3");
+
+// 
+
+let instagramIcon = document.getElementById("instagramIcon");
+let githubIcon = document.getElementById("githubIcon");
+
+
+
 fetch('https://api.quotable.io/random')
   .then(response => response.json())
   .then(data => printQuote(data));
@@ -40,3 +58,50 @@ fetch('https://api.quotable.io/random')
 	quoteAuthor3.append(data3["author"])	  
         
   };
+
+
+  // OTHER SECTION
+
+
+
+fetch('https://api.quotable.io/random')
+.then(response1 => response1.json())
+.then(data1 => printShortQuote1(data1));
+
+function printShortQuote1(data1){
+
+shortQuoteBody1.innerHTML = `"${data1["content"]}"`
+shortQuoteAuthor1.innerHTML =`${data1["author"]}`
+      
+};
+  
+fetch('https://api.quotable.io/random')
+.then(response2 => response2.json())
+.then(data2 => printShortQuote2(data2));
+
+function printShortQuote2(data2){
+
+shortQuoteBody2.innerHTML = `"${data2["content"]}"`
+shortQuoteAuthor2.innerHTML=`${data2["author"]}`	  
+      
+};
+  
+fetch('https://api.quotable.io/random')
+.then(response3 => response3.json())
+.then(data3 => printShortQuote3(data3));
+
+function printShortQuote3(data3){
+
+shortQuoteBody3.innerHTML = `"${data3["content"]}"`
+shortQuoteAuthor3.innerHTML = `${data3["author"]}`
+      
+};
+
+
+instagramIcon.addEventListener("click",function(){
+  location.href = "https://www.instagram.com/dalvinsegura/"
+})
+
+githubIcon.addEventListener("click",function(){
+  location.href = "https://github.com/dalvin181/"
+})
