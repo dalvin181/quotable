@@ -79,6 +79,18 @@ header{
     position: relative;
 }
 
+.quote_content_2 .quotes::before{
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 800px/10px;
+    bottom: -2px;
+    content: "";
+    height: 8px;
+    left: 2%;
+    position: absolute;
+    width: 96%;
+    z-index: -1; 
+  }
+
 .quote_content_2 .quotes .center{
     padding: 0 20px;
 }
@@ -164,16 +176,6 @@ footer .social_media img:hover{
         margin: 5% auto;
     }
 
-    .quote_content_2 .quotes::before{
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-        border-radius: 800px/10px;
-        bottom: -2px;
-        content: "";
-        height: 8px;
-        left: 2%;
-        position: absolute;
-        width: 96%;
-        z-index: -1; 
-      }
+
 
 }
