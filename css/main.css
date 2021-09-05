@@ -70,13 +70,13 @@ header{
 .quote_content_2 .quotes{
     background: #000;
     color: #fff;
-    padding: 80px 10px;
+    padding: 80px 30px;
     border-radius: 20px;
     text-align: center;
     margin: auto;
     width: 30%;
+    /* overflow: hidden; */
     position: relative;
-    overflow: hidden;
 }
 
 .quote_content_2 .quotes .center{
@@ -90,6 +90,11 @@ header{
     
 
 }
+
+.quote_content_2 .sssprev, .quote_content_2 .sssnext{
+    display: none;
+}
+
 
 svg{
     margin-bottom: -1%;
@@ -139,4 +144,36 @@ footer .social_media img:hover{
     transform: scale(1.1, 1.1);
     border-radius: 100%;
     box-shadow: 0 0 7px 2px var(--blue);
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width:842px){
+    .quote_content_2{
+        margin: 10% 2%;
+    }
+}
+
+@media screen and (max-width:740px){
+    .quote_content_2{
+        flex-direction: column;
+    }
+
+    .quote_content_2 .quotes{
+        width: 70%;
+        margin: 5% auto;
+    }
+
+    .quote_content_2 .quotes::before{
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        border-radius: 800px/10px;
+        bottom: -2px;
+        content: "";
+        height: 8px;
+        left: 2%;
+        position: absolute;
+        width: 96%;
+        z-index: -1; 
+      }
+
 }

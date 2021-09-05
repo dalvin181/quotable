@@ -7,6 +7,12 @@ let quoteAuthor2 = document.getElementById("quoteAuthor2");
 let quoteBody3 = document.getElementById("quoteBody3");
 let quoteAuthor3 = document.getElementById("quoteAuthor3");
 
+let quoteBody4 = document.getElementById("quoteBody4");
+let quoteAuthor4 = document.getElementById("quoteAuthor4");
+
+let quoteBody5 = document.getElementById("quoteBody5");
+let quoteAuthor5 = document.getElementById("quoteAuthor5");
+
 // 
 
 let shortQuoteBody1 = document.getElementById("shortQuoteBody1");
@@ -59,6 +65,27 @@ fetch('https://api.quotable.io/random')
         
   };
 
+fetch('https://api.quotable.io/random')
+  .then(response4 => response4.json())
+  .then(data4 => printQuote4(data4));
+
+  function printQuote4(data4){
+
+	quoteBody4.append(`"${data4["content"]}"`)
+	quoteAuthor4.append(data4["author"])	  
+        
+  };
+
+fetch('https://api.quotable.io/random')
+  .then(response5 => response5.json())
+  .then(data5 => printQuote5(data5));
+
+  function printQuote5(data5){
+
+	quoteBody5.append(`"${data5["content"]}"`)
+	quoteAuthor5.append(data5["author"])	  
+        
+  };
 
   // OTHER SECTION
 
